@@ -17,6 +17,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
@@ -55,6 +56,7 @@ vars:
     get: flutter pub get
     runner: flutter pub run build_runner
 scripts: 
+    mobx: flutter packages pub run build_runner watch --delete-conflicting-outputs
     mobx_build: $clean & $get & $runner build --delete-conflicting-outputs
     mobx_watch: $clean & $get & $runner watch --delete-conflicting-outputs
 
